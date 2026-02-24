@@ -8,10 +8,12 @@ export function HomeHeroSection (props: HomeHeroSectionProps) {
   const { title, subtitle, description } = props;
 
   return (
-    <div className="container mt-[46px] mb-[103px]">
-      <h1 className="text-xl pb-2">{title}</h1>
-      <h2 className="text-md pb-4">{subtitle}</h2>
-      <p className="text-[54px] leading-[80px]">{description}</p>
+    <div className="px-2">
+      <div className="container mt-[100px] mb-[103px]">
+        <h1 className="text-center md:text-left text-xl pb-2">{title}</h1>
+        <h2 className="text-center md:text-left text-md pb-4">{subtitle}</h2>
+        <p className="text-center md:text-left text-4xl md:text-[54px] md:leading-[80px] font-normal">{description}</p>
+      </div>
     </div>
   )
 }
