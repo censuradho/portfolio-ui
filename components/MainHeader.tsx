@@ -4,7 +4,7 @@ import { paths } from "@/constants/paths";
 
 export function MainHeader () {
   return (
-    <header className="flex justify-between items-center px-[3.125rem] py-[1.875rem]">
+    <header className="flex justify-between items-center p-5 md:px-[3.125rem] md:py-[1.875rem]">
       <Link href={paths.home} className="text-2xl underline font-semibold">
         Portfólio
       </Link>
