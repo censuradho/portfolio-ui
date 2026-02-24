@@ -3,7 +3,13 @@
 /* https://tailwindcss.com/docs/theme#default-theme-variable-reference */
 @custom-variant dark (&:is(.dark *));
 
-
+@layer utilities {
+  .container {
+    max-width: 70.0625rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -32,4 +38,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-weight: normal;
 }
