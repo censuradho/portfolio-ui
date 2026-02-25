@@ -7,6 +7,7 @@ export function homePageMapper (entry: HomePage): HomePageCMS {
   return {
     about: entry?.fields?.about || '',
     headline: entry?.fields?.headline || '',
+    headline2: entry?.fields?.headline2 || '',
     jobTitle: entry?.fields?.jobTitle || '',
     location: entry?.fields?.location || '',
     name: entry?.fields?.name || '',
