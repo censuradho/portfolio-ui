@@ -1,6 +1,8 @@
 import { contentfulService } from "@/infra/contentful/ContentfulService";
 import Image from "next/image";
 import { ExperienceEntry } from "./components/ExperienceEntry";
+import { Icon } from "@/components/Icon";
+import { TechStackCarrousel } from "./components/TechStackCarrousel";
 
 export default async function Home() {
   const data = await contentfulService.getHomePage();
@@ -37,12 +39,28 @@ export default async function Home() {
           <p className="paragraph">{data.about}</p>
         </section>
       </div>
-      <div className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l">
-        <h2 className="text-xs uppercase font-normal text-accent-foreground mb-4">Experience</h2>
-        <ul className="flex flex-col gap-6 mt-8">
+      <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
+        <h2 className="text-xs uppercase font-normal text-accent-foreground">Experience</h2>
+        <ul className="flex flex-col gap-6">
           {renderCarriers}
         </ul>
-      </div>
+        <div className="justify-end flex">
+          <a
+            href="/curriculo%20-%20Gustavo%20Leite%20Oliveira.pdf"
+            download
+            className="btn--primary"
+          >
+            <Icon name="Download" />
+            <span>
+              CV
+            </span>
+          </a>
+        </div>
+      </section>
+      <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
+        <h2 className="text-xs uppercase font-normal text-accent-foreground">Tech Stack</h2>
+        <TechStackCarrousel data={data.techStack} />
+      </section>
     </main>
   );
 }
