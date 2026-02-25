@@ -11,4 +11,11 @@ export interface HomePageCMS {
   techStack: string[]
   profilePicture: ImageCMS
   contactSection: ContactSectionCMS
+  carriers: Array<{
+    company: string
+    position: string
+    period: string
+    description: string
+    companyLogo: ImageCMS
+  }>
 }
