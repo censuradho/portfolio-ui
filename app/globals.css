@@ -12,6 +12,7 @@
   --color-outline: var(--outline);
   --color-card-foreground: var(--card-foreground);
   --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
   --color-available: var(--available);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent-foreground: var(--accent-foreground);
@@ -26,6 +27,7 @@
   --card-foreground: #757575;
   --outline: #2E2E2E;
   --primary: #007AFF;
+  --primary-foreground: #FFFFFF;
   --available: #55BBAF;
   --muted-foreground: #6B6B6B;
   --accent-foreground: #999999
@@ -38,6 +40,7 @@
   --card-foreground: #757575;
   --outline: #2E2E2E;
   --primary: #007AFF;
+  --primary-foreground: #FFFFFF;
   --available: #55BBAF;
   --muted-foreground: #6B6B6B;
   --accent-foreground: #999999
@@ -60,5 +63,22 @@ body {
     font-size: 14px;
     line-height: 22px;
     color: var(--card-foreground);
+  }
+
+  .btn--primary {
+    background-color: var(--primary);
+    color: var(--foreground);
+    padding: .75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 0.5rem;
+    border-radius: 90px;
+    transition: filter 0.3s ease;
+  }
+
+  .btn--primary:hover, 
+  .btn--primary:focus {
+    filter: brightness(1.2);
   }
 }
