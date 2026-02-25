@@ -12,6 +12,15 @@ export interface HomePageFields {
   techStack: string[]
   profilePicture: ImageEntry
   contactSection: ContactSection
+  carriers:Array<
+    ContentfulEntry<{
+      company: string
+      position: string
+      period: string
+      description: string
+      companyLogo: ImageEntry
+    }>
+  >
 }
 
 
