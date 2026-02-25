@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 import { MainHeader } from "@/components/MainHeader";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const figtree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
   weight: ["400", "500", "600"]
 });
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} antialiased`}
+        className={`${figtree.variable} antialiased`}
       >
         <MainHeader />
         {children}
