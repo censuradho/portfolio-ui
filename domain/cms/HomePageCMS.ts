@@ -19,3 +19,5 @@ export interface HomePageCMS {
     companyLogo: ImageCMS
   }>
 }
+
+export type CarrierEntryCMS = HomePageCMS['carriers'][number]
