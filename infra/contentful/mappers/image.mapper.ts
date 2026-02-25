@@ -2,10 +2,12 @@ import { ImageCMS } from "@/domain/cms/CMSTypes";
 import { ImageEntry } from "@/domain/contentful/ImageType";
 
 export function imageMapper(entry: ImageEntry): ImageCMS {
+  const url = entry.fields.file.url
+
   return {
     contentType: entry.fields.contentType || '',
     filename: entry.fields.file.fileName || '',
-    url: entry.fields.file.url || '',
+    url: url ? `https:${url}` : '',
     details: {
       image: {
         height: entry.fields.file.details.height || 0,
