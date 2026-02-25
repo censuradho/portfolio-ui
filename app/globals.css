@@ -3,13 +3,7 @@
 /* https://tailwindcss.com/docs/theme#default-theme-variable-reference */
 @custom-variant dark (&:is(.dark *));
 
-@layer utilities {
-  .container {
-    max-width: 70.0625rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -22,7 +16,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent-foreground: var(--accent-foreground);
   
-  --font-sans: var(--font-montserrat);
+  --font-sans: var(--font-figtree);
 }
 
 :root {
@@ -54,4 +48,17 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   font-weight: normal;
+}
+
+@layer utilities {
+  .container {
+    max-width: 38.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .paragraph {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--card-foreground);
+  }
 }
