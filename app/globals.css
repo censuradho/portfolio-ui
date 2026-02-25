@@ -17,21 +17,36 @@
   --color-card: var(--card);
   --color-outline: var(--outline);
   --color-card-foreground: var(--card-foreground);
-
+  --color-primary: var(--primary);
+  --color-available: var(--available);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  
   --font-sans: var(--font-montserrat);
 }
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #1A1B1F;
-  --card: #F4F4F4;
-  --outline: #E4E4E4;
-  --card-foreground: #B7B8BA;
+  --background: #1A1A1A;
+  --foreground: #E3E3E3;
+  --card: #1C1C1C;
+  --card-foreground: #757575;
+  --outline: #2E2E2E;
+  --primary: #007AFF;
+  --available: #55BBAF;
+  --muted-foreground: #6B6B6B;
+  --accent-foreground: #999999
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #1A1A1A;
+  --foreground: #E3E3E3;
+  --card: #1C1C1C;
+  --card-foreground: #757575;
+  --outline: #2E2E2E;
+  --primary: #007AFF;
+  --available: #55BBAF;
+  --muted-foreground: #6B6B6B;
+  --accent-foreground: #999999
 }
 
 body {
