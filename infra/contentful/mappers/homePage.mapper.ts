@@ -1,0 +1,17 @@
+import { HomePageCMS } from "@/domain/cms/HomePageCMS";
+import { HomePage } from "@/domain/contentful/HomePage";
+import { contactSectionMapper } from "./contactSection.mapper";
+import { imageMapper } from "./image.mapper";
+
+export function homePageMapper (entry: HomePage): HomePageCMS {
+  return {
+    about: entry?.fields?.about || '',
+    headline: entry?.fields?.headline || '',
+    jobTitle: entry?.fields?.jobTitle || '',
+    location: entry?.fields?.location || '',
+    name: entry?.fields?.name || '',
+    techStack: entry?.fields?.techStack || [],
+    profilePicture: imageMapper(entry?.fields?.profilePicture),
+    contactSection: contactSectionMapper(entry?.fields?.contactSection),
+  }
+}
