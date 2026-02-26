@@ -13,6 +13,34 @@ export const metadata: Metadata = {
   description: "Professional portfolio of Gustavo Leite, Software Engineer and Front-end/Full-Stack developer. Explore projects, experience, and get in touch.",
   icons: {
     icon: '/favicon.svg'
+  },
+  openGraph: {
+    images: [
+      {
+        url: '/og-image-lg.jpg',
+        width: 1080,
+        height: 1080,
+        alt: 'Gustavo Leite Portfolio'
+      },
+      {
+        url: '/og-image-twitter.jpg',
+        width: 800,
+        height: 418,
+        alt: 'Gustavo Leite Portfolio'
+      },
+      {
+        url: '/og-image-md.jpg',
+        width: 600,
+        height: 315,
+        alt: 'Gustavo Leite Portfolio'
+      },
+      {
+        url: '/og-image-xl.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Gustavo Leite Portfolio'
+      },
+    ]
   }
 };
 
