@@ -66,10 +66,35 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  
+  .container-md {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   .paragraph {
     font-size: 14px;
     line-height: 22px;
     color: var(--card-foreground);
+  }
+
+  .markdown > * {
+    all: revert;
+  }
+
+  .markdown p {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--card-foreground);
+  }
+
+  .markdown h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: var(--foreground);
   }
 
   .btn--primary {
