@@ -1,27 +1,21 @@
 import Link from "next/link";
-import { NavLink } from "./NavLink";
-import { paths } from "@/constants/paths";
+import { cn } from "@/lib/utils";
+import { Icon } from "./Icon";
 
 export function MainHeader () {
   return (
-    <header className="flex justify-between items-center p-5 md:px-[3.125rem] md:py-[1.875rem]">
-      <Link href={paths.home} className="text-2xl underline font-semibold">
-        Portfólio
-      </Link>
-      <nav>
-        <ul className="flex gap-5">
-          <li>
-            <NavLink href={paths.home} className="text-xs uppercase" activeClassName="font-bold">
-              Sobre
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href={paths.projects} className="text-xs uppercase" activeClassName="font-semibold">
-              Projetos
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+    <header
+      className={cn(
+        'sticky top-0 flex items-center gap-6 bg-background/70 backdrop-blur-2xl z-10',
+        ' transition-transform duration-300 ease container-md border-dashed border-l border-r border-outline'
+      )}
+    >
+      <div className="w-full border-b border-outline px-2 py-4">
+        <Link href="/" className="flex items-center gap-2 cursor-pointer">
+          <Icon name="keyboardLeft" />
+          <span>Voltar</span>
+        </Link>
+      </div>
     </header>
   )
 }
