@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -49,12 +50,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ''
+
   return (
     <html lang="pt">
       <body
         className={`${figtree.variable} antialiased`}
       >
         {children}
+        {}
+        {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
   );
