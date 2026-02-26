@@ -26,7 +26,7 @@ export function ExperienceEntry(props: ExperienceEntryProps) {
           </p>
         </div>
       </div>
-      <p className="paragraph  pl-[46px]">{data.description}</p>
+      <p className="paragraph pl-[46px]">{data.description}</p>
     </div>
   )
 
