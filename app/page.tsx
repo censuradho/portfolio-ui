@@ -5,14 +5,25 @@ import { TechStackCarrousel } from "./components/TechStackCarrousel";
 import { ContactSection } from "@/components/ContactSection";
 import { Header } from "./components/Header";
 import { BallFollower } from "@/components/BallFollower";
+import { FeaturedProject } from "./components/FeaturedProject";
+import { LinKButton } from "@/components/LinkButton";
+import { paths } from "@/constants/paths";
 
 export default async function Home() {
   const data = await contentfulService.getHomePage();
-  
+  const featuredProjects = await contentfulService.getProjectsFeatured();
+
   const renderCarriers = data.carriers.map((carrier,index) => (
     <li key={index}>
       <ExperienceEntry data={carrier} />
     </li>
+  ))
+
+  const renderFeaturedProjects = featuredProjects.map((project, index) => (
+    <FeaturedProject 
+      key={index}
+      data={project}
+    />
   ))
   return (
     <main className="">
@@ -54,6 +65,13 @@ export default async function Home() {
       <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
         <h2 className="text-xs uppercase font-normal text-accent-foreground">Tech Stack</h2>
         <TechStackCarrousel data={data.techStack} />
+      </section>
+      <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
+        <h2 className="text-xs uppercase font-normal text-accent-foreground">Featured Projects</h2>
+        <div className="flex flex-col gap-6">
+          {renderFeaturedProjects}
+        </div>
+        <LinKButton href={paths.projects}>See all projects</LinKButton>
       </section>
       <ContactSection data={data.contactSection} />
       <BallFollower />
