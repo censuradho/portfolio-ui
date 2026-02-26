@@ -46,7 +46,13 @@ export function Header (props: HeaderProps) {
             <strong className="text-xs text-card-foreground font-medium">{jobTitle}</strong>
             <div className="flex items-center gap-1">
               <span className="text-xs">{location}</span>
-              <Image src="/brFlag.svg" alt="Brazil Flag" width={16} height={16} />
+              <Image 
+                preload 
+                src="/brFlag.svg" 
+                alt="Brazil Flag" 
+                width={16} 
+                height={16} 
+              />
             </div>
           </div>
         </div>
