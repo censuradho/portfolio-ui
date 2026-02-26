@@ -22,8 +22,9 @@
   --font-sans: var(--font-figtree);
 }
 
+/* 1A1A1A */
 :root {
-  --background: #1A1A1A;
+  --background: #161616;
   --foreground: #E3E3E3;
   --card: #1C1C1C;
   --card-foreground: #757575;
@@ -38,7 +39,7 @@
 }
 
 .dark {
-  --background: #1A1A1A;
+  --background: #161616;
   --foreground: #E3E3E3;
   --card: #1C1C1C;
   --card-foreground: #757575;
