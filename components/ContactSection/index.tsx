@@ -13,8 +13,7 @@ export function ContactSection (props: ContactSectionProps) {
 
   return (
     <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
-      <strong className="text-2xl leading-[42px]">{data.title}</strong>
-
+      <strong className="text-2xl leading-[42px] font-medium">{data.title}</strong>
       <a 
         href={`mailto:${data.email}`} 
         className="text-card-foreground hover:underline text-sm"
