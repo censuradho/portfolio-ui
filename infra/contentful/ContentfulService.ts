@@ -22,11 +22,23 @@ const getProjectsFeaturedCached = cache(async (contentfulClient: ContentfulClien
   return productEntriesMapper(response as any)
 })
 
+const getProjectBySlugCached = cache(async (contentfulClient: ContentfulClientApi<undefined>, slug: string) => {
+  const response = await contentfulClient.getEntries({
+    content_type: 'project',
+    'fields.slug': slug,
+  });
+
+  const projects = productEntriesMapper(response as any);
+
+  return projects.length > 0 ? projects[0] : null;
+})
+
 const getHomePageCached = cache(async (contentfulClient: ContentfulClientApi<undefined>) => {
   const response = await contentfulClient.getEntry('44xE0wVPVZdNBfqLc5nQoC');
 
   return homePageMapper(response as any);
 })
+
 export class ContentfulService implements CMSService {
   constructor(
     private readonly contentfulClient: ContentfulClientApi<undefined> = client
@@ -38,6 +50,9 @@ export class ContentfulService implements CMSService {
 
   async getProjectsFeatured (): Promise<ProductPageCMS[]> {
     return getProjectsFeaturedCached(this.contentfulClient);
+  }
+  async getProjectBySlug (slug: string): Promise<ProductPageCMS | null> {
+    return getProjectBySlugCached(this.contentfulClient, slug);
   }
 }
 
