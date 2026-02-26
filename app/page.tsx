@@ -8,6 +8,16 @@ import { BallFollower } from "@/components/BallFollower";
 import { FeaturedProject } from "./components/FeaturedProject";
 import { LinKButton } from "@/components/LinkButton";
 import { paths } from "@/constants/paths";
+import { Metadata } from "next";
+
+export async function generateMetadata (): Promise<Metadata> {
+  const data = await contentfulService.getHomePage();
+
+  return {
+    title: data.seo.title,
+    description: data.seo.description,
+  }
+}
 
 export default async function Home() {
   const data = await contentfulService.getHomePage();
