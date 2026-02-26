@@ -81,7 +81,7 @@ export default async function Home() {
         <div className="flex flex-col gap-6">
           {renderFeaturedProjects}
         </div>
-        <LinKButton href={paths.projects}>See all projects</LinKButton>
+        {/* <LinKButton href={paths.projects}>See all projects</LinKButton> */}
       </section>
       <ContactSection data={data.contactSection} />
       <BallFollower />
