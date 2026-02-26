@@ -19,7 +19,7 @@
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   
-  --font-sans: var(--font-figtree);
+  --font-figtree: var(--font-figtree);
 }
 
 /* 1A1A1A */
@@ -57,10 +57,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
   font-weight: normal;
 }
 
+* {
+  font-family: var(--font-figtree);
+}
 @layer utilities {
   .container {
     max-width: 38.75rem;
