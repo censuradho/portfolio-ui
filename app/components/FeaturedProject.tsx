@@ -32,7 +32,6 @@ export function FeaturedProject ({ data }: FeaturedProjectProps) {
             src={data.previewImage.url}
             alt=""
             fill
-            objectFit="cover"
             className="w-full h-full top-0 left-0 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
