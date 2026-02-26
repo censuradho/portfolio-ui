@@ -6,6 +6,7 @@ import Github from '@/public/icons/github.svg';
 import Location from '@/public/icons/location.svg';
 import Star from '@/public/icons/star.svg';
 import Telegram from '@/public/icons/telegram.svg';
+import Linkedin from '@/public/icons/linkedin.svg';
 
 export const icons = {
   Menu,
@@ -15,5 +16,6 @@ export const icons = {
   Github,
   Location,
   Star,
-  Telegram
+  Telegram,
+  Linkedin
 }
