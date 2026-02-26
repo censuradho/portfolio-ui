@@ -7,7 +7,6 @@ interface TechStackCarrouselProps {
 }
 
 const appendStar = (list: string[]) => list
-  .sort(() => Math.random() - 0.5)
   .flatMap((item, idx) =>
     idx < list.length - 1 ? [item, '✦'] : [item]
   );
