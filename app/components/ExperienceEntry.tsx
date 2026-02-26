@@ -19,7 +19,7 @@ export function ExperienceEntry(props: ExperienceEntryProps) {
         />
         <div className="flex flex-col gap-2">
           <h3 className="text-sm font-medium">{data.position}</h3>
-          <p className="text-xs uppercase font-semibold text-muted-foreground">
+          <p className="text-xs uppercase font-bold text-muted-foreground">
             <span>{data.company}</span>
             <span> · </span>
             <span>{data.period}</span>
