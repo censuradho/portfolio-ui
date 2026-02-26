@@ -6,3 +6,12 @@ export interface ContentfulEntry<T> {
   }
   fields: T;
 }
+
+
+
+export interface ContentfulEntries<T> {
+  limit: number;
+  skip: number;
+  total: number;
+  items: ContentfulEntry<T>[];
+}
