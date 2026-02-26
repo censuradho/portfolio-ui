@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ExperienceEntry } from "./components/ExperienceEntry";
 import { Icon } from "@/components/Icon";
 import { TechStackCarrousel } from "./components/TechStackCarrousel";
+import { ContactSection } from "@/components/ContactSection";
 
 export default async function Home() {
   const data = await contentfulService.getHomePage();
@@ -61,6 +62,7 @@ export default async function Home() {
         <h2 className="text-xs uppercase font-normal text-accent-foreground">Tech Stack</h2>
         <TechStackCarrousel data={data.techStack} />
       </section>
+      <ContactSection data={data.contactSection} />
     </main>
   );
 }
