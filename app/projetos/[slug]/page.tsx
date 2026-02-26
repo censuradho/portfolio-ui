@@ -35,7 +35,6 @@ export default async function ProjectPage ({ params }: ProjectPageMetadataParams
 
   const project = (await contentfulService.getProjectBySlug(slug))!
 
-  const teste = `# Teste\nTexto normal`
   return (
     <>
       <MainHeader />
