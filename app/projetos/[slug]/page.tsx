@@ -66,8 +66,8 @@ export default async function ProjectPage ({ params }: ProjectPageMetadataParams
             src={project.previewImage.url}
             className="rounded-2xl"
             alt=""
-            objectFit="cover"
             fill
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className="markdown">
