@@ -67,6 +67,7 @@ export default async function ProjectPage ({ params }: ProjectPageMetadataParams
             className="rounded-2xl"
             alt=""
             fill
+            preload
             style={{ objectFit: 'cover' }}
           />
         </div>
