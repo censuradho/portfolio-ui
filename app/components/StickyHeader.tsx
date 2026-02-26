@@ -20,7 +20,7 @@ export function StickyHeader (props: StickyHeaderProps) {
       <aside
         aria-label="Perfil fixo"
         className={cn(
-          'flex items-center gap-6 bg-background/20 backdrop-blur-2xl border-outline border p-2 transition-transform duration-300 ease',
+          'flex items-center gap-6 bg-background/70 backdrop-blur-3xl border-outline border p-2 transition-transform duration-300 ease',
           {
             'translate-y-0 opacity-100': visible,
             '-translate-y-5 opacity-0 pointer-events-none': !visible,
