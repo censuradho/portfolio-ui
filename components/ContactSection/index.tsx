@@ -20,7 +20,7 @@ export function ContactSection (props: ContactSectionProps) {
         className="text-card-foreground hover:underline text-sm"
       >{data.email}</a>
       <p className="flex gap-2 items-center">
-        <div 
+        <span 
           className={cn(
             styles.available_indicator,
             'size-2.5 bg-available rounded-full'
