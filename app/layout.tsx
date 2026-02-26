@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html lang="pt">
       <body
         className={`${figtree.variable} antialiased`}
       >
