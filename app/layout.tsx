@@ -58,9 +58,8 @@ export default function RootLayout({
         className={`${figtree.variable} antialiased`}
       >
         {children}
-        {}
-        {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
+      {gaId && <GoogleAnalytics  gaId={gaId} />}
     </html>
   );
 }
