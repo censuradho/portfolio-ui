@@ -16,6 +16,8 @@
   --color-available: var(--available);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent-foreground: var(--accent-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
   
   --font-sans: var(--font-figtree);
 }
@@ -28,9 +30,11 @@
   --outline: #2E2E2E;
   --primary: #007AFF;
   --primary-foreground: #FFFFFF;
+  --secondary: #FFF;
+  --secondary-foreground: #000;
   --available: #55BBAF;
   --muted-foreground: #6B6B6B;
-  --accent-foreground: #999999
+  --accent-foreground: #999999;
 }
 
 .dark {
@@ -41,9 +45,12 @@
   --outline: #2E2E2E;
   --primary: #007AFF;
   --primary-foreground: #FFFFFF;
+  --secondary: #FFF;
+  --secondary-foreground: #000;
   --available: #55BBAF;
   --muted-foreground: #6B6B6B;
-  --accent-foreground: #999999
+  --accent-foreground: #999999;
+  
 }
 
 body {
