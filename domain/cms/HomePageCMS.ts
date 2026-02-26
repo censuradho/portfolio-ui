@@ -1,5 +1,6 @@
 import { ImageCMS } from "./CMSTypes"
 import { ContactSectionCMS } from "./ContactSectionCMS"
+import { SeoCMS } from "./SeoCMS"
 
 export interface HomePageCMS {
   about: string
@@ -9,6 +10,7 @@ export interface HomePageCMS {
   location: string
   name: string
   techStack: string[]
+  seo: SeoCMS
   profilePicture: ImageCMS
   contactSection: ContactSectionCMS
   carriers: Array<{
