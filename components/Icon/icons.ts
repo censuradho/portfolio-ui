@@ -9,10 +9,12 @@ import Telegram from '@/public/icons/telegram.svg';
 import Linkedin from '@/public/icons/linkedin.svg';
 import ArrowTopRight from '@/public/icons/arrowTopRight.svg';
 import ArrowRight from '@/public/icons/arrowRight.svg';
+import keyboardLeft from '@/public/icons/keyboardLeft.svg';
 
 export const icons = {
   ArrowTopRight,
   ArrowRight,
+  keyboardLeft,
   Menu,
   Cloak,
   Download,
