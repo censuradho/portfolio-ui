@@ -24,7 +24,6 @@ export default function RootLayout({
       <body
         className={`${figtree.variable} antialiased`}
       >
-        <MainHeader />
         {children}
       </body>
     </html>
