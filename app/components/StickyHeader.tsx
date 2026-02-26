@@ -39,7 +39,7 @@ export function StickyHeader (props: StickyHeaderProps) {
             <h1 className="text-md font-semibold">{name}</h1>
             <Image src="/verified.svg" alt="Verified Badge" width={16} height={16} />
           </div>
-          <span className="text-xs text-card-foreground font-normal">{jobTitle}</span>
+          <span className="text-xs text-card-foreground font-medium">{jobTitle}</span>
         </div>
       </aside>
     </div>

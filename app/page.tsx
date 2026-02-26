@@ -45,7 +45,7 @@ export default async function Home() {
           location={data.location}
         />
         <section className="flex flex-col gap-8 py-[32px]">
-          <h2 className="text-xs uppercase font-normal text-accent-foreground">About</h2>
+          <h2 className="text-xs uppercase font-medium text-accent-foreground">About</h2>
           <p className="text-3xl">
             <span>{data.headline}</span>
             <br />
@@ -55,7 +55,7 @@ export default async function Home() {
         </section>
       </div>
       <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
-        <h2 className="text-xs uppercase font-normal text-accent-foreground">Experience</h2>
+        <h2 className="text-xs uppercase font-medium text-accent-foreground">Experience</h2>
         <ul className="flex flex-col gap-6">
           {renderCarriers}
         </ul>
@@ -73,11 +73,11 @@ export default async function Home() {
         </div>
       </section>
       <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
-        <h2 className="text-xs uppercase font-normal text-accent-foreground">Tech Stack</h2>
+        <h2 className="text-xs uppercase font-medium text-accent-foreground">Tech Stack</h2>
         <TechStackCarrousel data={data.techStack} />
       </section>
       <section className="container py-[1.875rem] px-4 border-dashed border-outline border-b border-r border-l flex flex-col gap-8">
-        <h2 className="text-xs uppercase font-normal text-accent-foreground">Featured Projects</h2>
+        <h2 className="text-xs uppercase font-medium text-accent-foreground">Featured Projects</h2>
         <div className="flex flex-col gap-6">
           {renderFeaturedProjects}
         </div>

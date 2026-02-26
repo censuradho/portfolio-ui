@@ -12,7 +12,7 @@ export function LinKButton (props: PropsWithChildren<LinkButtonProps>) {
       className="group w-max bg-secondary text-secondary-foreground rounded-full pr-1 pl-4 py-0.5 inline-flex items-center gap-3.5 transition-colors duration-300 ease hover:bg-secondary/90"
       {...otherProps}
     >
-      <span className="text-sm font-normal">{props.children}</span>
+      <span className="text-sm font-medium">{props.children}</span>
       <div className="w-[40px] h-[40px]  rounded-full bg-secondary-foreground flex items-center justify-center overflow-hidden relative">
         {/* Arrow 1: começa escondida à esquerda, vai para o centro no hover */}
         <Icon

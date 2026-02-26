@@ -43,7 +43,7 @@ export function Header (props: HeaderProps) {
         <div className="flex flex-col gap-2">
           <h1 className="text-md font-semibold">{name}</h1>
           <div className="flex flex-col gap-1">
-            <strong className="text-xs text-card-foreground font-normal">{jobTitle}</strong>
+            <strong className="text-xs text-card-foreground font-medium">{jobTitle}</strong>
             <div className="flex items-center gap-1">
               <span className="text-xs">{location}</span>
               <Image src="/brFlag.svg" alt="Brazil Flag" width={16} height={16} />

@@ -18,7 +18,7 @@ export function ExperienceEntry(props: ExperienceEntryProps) {
           height={32}
         />
         <div className="flex flex-col gap-2">
-          <h3 className="text-sm font-normal">{data.position}</h3>
+          <h3 className="text-sm font-medium">{data.position}</h3>
           <p className="text-xs uppercase text-muted-foreground">
             <span>{data.company}</span>
             <span> · </span>
