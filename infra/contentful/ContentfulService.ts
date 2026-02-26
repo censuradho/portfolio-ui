@@ -4,6 +4,8 @@ import { type CMSService } from '@/domain/cms/CMSService';
 import { type HomePageCMS } from '@/domain/cms/HomePageCMS';
 
 import { homePageMapper } from './mappers/homePage.mapper';
+import { productEntriesMapper } from './mappers/productEntries.mapper';
+import { ProductPageCMS } from '@/domain/cms/ProductPageCMS';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
@@ -19,6 +21,15 @@ export class ContentfulService implements CMSService {
     const response = await this.contentfulClient.getEntry('44xE0wVPVZdNBfqLc5nQoC');
 
     return homePageMapper(response as any); 
+  }
+
+  async getProjectsFeatured (): Promise<ProductPageCMS[]> {
+    const response = await this.contentfulClient.getEntries({
+      content_type: 'project',
+      'fields.isFeatured': true,
+    });
+
+    return productEntriesMapper(response as any);
   }
 }
 
