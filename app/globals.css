@@ -35,7 +35,7 @@
   --secondary-foreground: #000;
   --available: #55BBAF;
   --muted-foreground: #6B6B6B;
-  --accent-foreground: #999999;
+  --accent-foreground: #A4A4A4;
 }
 
 .dark {
@@ -50,7 +50,7 @@
   --secondary-foreground: #000;
   --available: #55BBAF;
   --muted-foreground: #6B6B6B;
-  --accent-foreground: #999999;
+  --accent-foreground: #A4A4A4;
   
 }
 
