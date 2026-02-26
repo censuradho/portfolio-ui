@@ -4,6 +4,7 @@ import { Icon } from "@/components/Icon";
 import { TechStackCarrousel } from "./components/TechStackCarrousel";
 import { ContactSection } from "@/components/ContactSection";
 import { Header } from "./components/Header";
+import { BallFollower } from "@/components/BallFollower";
 
 export default async function Home() {
   const data = await contentfulService.getHomePage();
@@ -55,6 +56,7 @@ export default async function Home() {
         <TechStackCarrousel data={data.techStack} />
       </section>
       <ContactSection data={data.contactSection} />
+      <BallFollower />
     </main>
   );
 }
