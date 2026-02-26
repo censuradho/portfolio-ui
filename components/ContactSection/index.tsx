@@ -30,17 +30,35 @@ export function ContactSection (props: ContactSectionProps) {
       <aside>
         <ul className="flex items-center gap-4 text-accent-foreground">
           <li>
-            <a href={data.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            <a 
+              aria-label="LinkedIn"
+              href={data.linkedin} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-foreground"
+            >
               <Icon name="Linkedin" />
             </a>
           </li>
           <li>
-            <a href={data.github} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            <a 
+              aria-label="GitHub"
+              href={data.github} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-foreground"
+            >
               <Icon name="Github" />
             </a>
           </li>
           <li>
-            <a href={data.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            <a 
+              aria-label="Telegram"
+              href={data.telegram} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-foreground"
+            >
               <Icon name="Telegram" />
             </a>
           </li>
