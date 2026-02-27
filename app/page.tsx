@@ -6,8 +6,6 @@ import { ContactSection } from "@/components/ContactSection";
 import { Header } from "./components/Header";
 import { BallFollower } from "@/components/BallFollower";
 import { FeaturedProject } from "./components/FeaturedProject";
-import { LinKButton } from "@/components/LinkButton";
-import { paths } from "@/constants/paths";
 import { Metadata } from "next";
 
 export async function generateMetadata (): Promise<Metadata> {
@@ -18,6 +16,8 @@ export async function generateMetadata (): Promise<Metadata> {
     description: data.seo.description,
   }
 }
+
+export const revalidate = 60 * 10; 
 
 export default async function Home() {
   const data = await contentfulService.getHomePage();
