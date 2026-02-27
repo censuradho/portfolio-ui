@@ -17,6 +17,7 @@ const getProjectsFeaturedCached = cache(async (contentfulClient: ContentfulClien
   const response = await contentfulClient.getEntries({
     content_type: 'project',
     'fields.isFeatured': true,
+    locale: 'pt-BR'
   });
 
   return productEntriesMapper(response as any)
@@ -26,6 +27,7 @@ const getProjectBySlugCached = cache(async (contentfulClient: ContentfulClientAp
   const response = await contentfulClient.getEntries({
     content_type: 'project',
     'fields.slug': slug,
+    locale: 'pt-BR'
   });
 
   const projects = productEntriesMapper(response as any);
@@ -34,7 +36,9 @@ const getProjectBySlugCached = cache(async (contentfulClient: ContentfulClientAp
 })
 
 const getHomePageCached = cache(async (contentfulClient: ContentfulClientApi<undefined>) => {
-  const response = await contentfulClient.getEntry('44xE0wVPVZdNBfqLc5nQoC');
+  const response = await contentfulClient.getEntry('44xE0wVPVZdNBfqLc5nQoC', {
+    locale: 'pt-BR'
+  });
 
   return homePageMapper(response as any);
 })
