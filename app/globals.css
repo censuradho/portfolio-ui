@@ -76,7 +76,7 @@ body {
     margin-right: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     .container-md {
       max-width: 1150px;
     }
