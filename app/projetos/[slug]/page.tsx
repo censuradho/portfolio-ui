@@ -45,19 +45,19 @@ export default async function ProjectPage ({ params }: ProjectPageMetadataParams
         </div>
         <dl className="flex gap-4 md:gap-30 mt-[48px] flex-wrap">
           <div className="flex flex-col gap-2">
-            <dt className="text-sm text-accent-foreground">Locale</dt>
+            <dt className="text-sm text-accent-foreground">Localidade</dt>
             <dd className="text-lg font-medium">{project.location}</dd>
           </div>
           <div className="flex flex-col gap-2">
-            <dt className="text-sm text-accent-foreground">Industry</dt>
+            <dt className="text-sm text-accent-foreground">Indústria</dt>
             <dd className="text-lg font-medium">{project.industry}</dd>
           </div>
           <div className="flex flex-col gap-2">
-            <dt className="text-sm text-accent-foreground">Duration</dt>
+            <dt className="text-sm text-accent-foreground">Duração</dt>
             <dd className="text-lg font-medium">{project.duration}</dd>
           </div>
           <div className="flex flex-col gap-2">
-            <dt className="text-sm text-accent-foreground">Date</dt>
+            <dt className="text-sm text-accent-foreground">Data</dt>
             <dd className="text-lg font-medium">{project.date}</dd>
           </div>
         </dl>
