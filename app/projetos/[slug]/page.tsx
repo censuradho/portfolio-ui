@@ -61,7 +61,7 @@ export default async function ProjectPage ({ params }: ProjectPageMetadataParams
             <dd className="text-lg font-medium">{project.date}</dd>
           </div>
         </dl>
-        <div className="w-full h-[500px] md:h-[800px] relative mt-16">
+        <div className="w-full h-[500px] md:h-[600px] lg:h-[800px] relative mt-16">
           <Image 
             src={project.previewImage.url}
             className="rounded-2xl"
