@@ -17,7 +17,7 @@ export async function generateMetadata (): Promise<Metadata> {
   }
 }
 
-export const revalidate = 60 * 10; 
+export const revalidate = 60; 
 
 export default async function Home() {
   const data = await contentfulService.getHomePage();

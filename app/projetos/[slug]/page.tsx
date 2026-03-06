@@ -13,7 +13,7 @@ interface ProjectPageMetadataParams {
   params: Promise<ProjectPageProps>
 }
 
-export const revalidate = 60 * 10 
+export const revalidate = 60 
 
 export async function generateMetadata (props: ProjectPageMetadataParams) {
   const { params } = props;
