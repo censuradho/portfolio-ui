@@ -5,6 +5,7 @@ import { imageMapper } from "./image.mapper";
 import { seoContentfulMapper } from "./seoContentful.mapper";
 
 export function productEntriesMapper (entries: ProductPageEntries): ProductPageCMS[] {
+  console.log(entries.items[0].fields.cta)
   return entries.items.map(entry => ({
     date: entry.fields.date,
     slug: entry.fields.slug,
