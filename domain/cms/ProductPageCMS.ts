@@ -1,4 +1,5 @@
 import { ImageCMS } from "./CMSTypes"
+import { CtaCMS } from "./CtaCMS"
 import { SeoCMS } from "./SeoCMS"
 
 export interface ProductPageCMS {
@@ -16,4 +17,5 @@ export interface ProductPageCMS {
     image: ImageCMS
     featureImage: ImageCMS
     seo: SeoCMS
+    cta?: CtaCMS
 }
