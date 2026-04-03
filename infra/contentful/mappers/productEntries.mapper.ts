@@ -1,5 +1,6 @@
 import { ProductPageCMS } from "@/domain/cms/ProductPageCMS";
 import { ProductPageEntries } from "@/domain/contentful/ProjectPage";
+import { ctaMapper } from "./cta.mapper";
 import { imageMapper } from "./image.mapper";
 import { seoContentfulMapper } from "./seoContentful.mapper";
 
@@ -18,6 +19,7 @@ export function productEntriesMapper (entries: ProductPageEntries): ProductPageC
     previewImage: imageMapper(entry.fields.previewImage),
     image: imageMapper(entry.fields.image),
     featureImage: imageMapper(entry.fields.featureImage),
-    seo: seoContentfulMapper(entry.fields.seo)
+    seo: seoContentfulMapper(entry.fields.seo),
+    cta: entry.fields.cta ? ctaMapper(entry.fields.cta) : undefined,
   }))
 }
